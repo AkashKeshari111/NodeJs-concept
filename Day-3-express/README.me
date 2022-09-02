@@ -1,0 +1,26 @@
+
+
+// for installation
+
+1. npm init -y
+2. npm i express
+3. npm i nodemon -D
+4. create a db.json database
+5. change in script -> "serve":"nodemon ./src/index.js" //or=> './src/CURD.js' 
+6. npm run serve
+
+
+//What types of error comes 
+
+1. Drectory or path
+
+2. file updation is different below is right code
+   =>   const updateddb=(updatedProducts)=>{
+            fs.writeFileSync(`${__dirname}/./db.json`,JSON.stringify(updatedProducts),{encoding:"utf-8"})
+          }
+
+3. for reading JSON body use=>  app.use(express.json())
+
+4.Don't forget to spreeding your db=> {...db,whatever inside this you need}
+
+
