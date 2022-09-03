@@ -1,4 +1,4 @@
-// here me make CURD or CRUD application \\
+// here we make CURD or CRUD application \\
 
 //import Part
 
