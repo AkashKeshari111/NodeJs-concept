@@ -6,4 +6,5 @@ function sub(a,b){
     return a-b;
 }
 
-module.exports={sum,sub}
+//export
+module.exports={sum,sub}   // It is imported on index.js file see index.js file

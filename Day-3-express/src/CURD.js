@@ -1,4 +1,4 @@
-// here me make CURD or CRUD application \\
+// here we make CURD or CRUD application \\
 
 //import Part
 
@@ -49,7 +49,7 @@ app.get("/", (req, res) => {
 app.get("/products", (req, res) => {
   // res.send("<h1>Hello, GET /product is working now</h1>")//we can also use html tag
 
-  res.send(products); //we can also use html tag
+  res.send(products); 
 });
 
 app.get("/products/:id", (req, res) => {

@@ -14,13 +14,13 @@
 
 1. Drectory or path
 
-2. file updation is different below is right code
+2. file updation is different, below is right code
    =>   const updateddb=(updatedProducts)=>{
             fs.writeFileSync(`${__dirname}/./db.json`,JSON.stringify(updatedProducts),{encoding:"utf-8"})
           }
 
 3. for reading JSON body use=>  app.use(express.json())
 
-4.Don't forget to spreeding your db=> {...db,whatever inside this you need}
+4. Don't forget to spreeding your db=> {...db,whatever inside this you need}
 
 
