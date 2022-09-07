@@ -1,0 +1,33 @@
+1.callback=>passed a function as an argument to another function.
+2.clouser=>A Function Inside a Function.
+3.module=>a pattern in which we break our code into multiple files that be imported whenever required.
+4.NodeJs=>Runtime for Javascript.
+5.JavaScript is created in=>year 1995.
+
+6.Problems with Javascript ?
+=>Does not works with files.
+does not work with request responses.
+does not work with databases.
+cannot perform system operations.
+
+7.Why do we need a server ?
+=>To store information and only provide relative information.
+perform analysis on data and derive results.
+interact with other endpoints even when someone is not on our website.
+data to exist even without need for user to stay on website.
+
+8.How does a Machine Excute the code=>JavaScript -->c/c++ -->Assembled Language -->Machine Language.
+9.What is NodeJs=>Node or Node.js is an open-source, cross-platform JavaScript based server-side runtime framework.Unlike JavaScript, Node runs on a server.
+10.What is ExpressJS=>ExpressJS is a NodeJS framework for creating server-side applications.ExpressJS is the middleware and sits between React and Node as a part of the MERN stack.
+11.What is MERN stack=>MERN is a Web development stack for building full stack Web applications.
+12.require=>require allows us to grab code exported from some other module into our current module.
+13.Get method(verbs)
+   => The HTTP GET method is used to read (or retrieve) a representation of a resource.
+   =>According to the design of the HTTP specification, GET (along with HEAD) requests are used only to read data and not change it.
+
+14.Post verbs
+   =>The POST verb is most-often utilized to create new resources.
+   =>In particular, it's used to create subordinate resources.
+   =>That is, subordinate to some other (e.g. parent) resource.
+
+15.
