@@ -1,0 +1,145 @@
+on Terminal...
+
+1. mongo
+2. show dbs
+3. use <database_name>  // if created already if not it will created for you
+4. show collections   //if any
+
+
+A.//for creating our first collections
+
+1. db.collections.insertOne({name:"Akash",lname:"Keshari",salary:10000})
+2. db.collections.find()
+
+B.//for creating many collections at a time 
+
+1. db.collections.insertMany([{name:"Akash",lname:"Keshari",salary:10000},{name:"Himanshu",lname:"Mishra",salary:9000}])
+2. db.collections.find()
+
+
+C.//for finding
+1. db.collections.findOne({name:"Akash"})
+2. db.collections.findMany({name:"Akash"})
+
+
+
+D.//for deleting
+
+1. db.collections.deleteOne({name:"Akash"})
+ 2.db.collections.deleteMany({name:"Akash"})  // it delete many which name is Akash if more than one exits
+
+
+
+E.// for update
+1. db.collections.updateOne({name:"Akash"},{$set:{name:"Prashant",age:20}})
+2. db.collections.updateMany({name:"Akash"},{$set:{name:"Prashant",age:20}})
+
+
+
+F.//for filtering
+1. db.collections.find({},{_id:0,name:1,lname:1})
+
+
+
+Part-2
+0.download data from mackroos 
+
+1. mongoimport --drop --db b19 --collection users --file ./users.json --jsonArray
+
+2. mongo
+
+3. use b1  //we make another db here
+
+4. db.users.find()  //your json file name here users
+
+
+
+Mathematical Operators
+
+A.// less than / Greater than
+
+1.  db.users.find({age:{$gt:20}},{_id:0,name:1,age:1})
+2.  db.users.find({age:{$lt:20}},{_id:0,name:1,age:1})
+
+B. //less than equal to / Greater than equal to
+
+1.  db.users.find({age:{$gte:20}},{_id:0,name:1,age:1})
+2.  db.users.find({age:{$lte:20}},{_id:0,name:1,age:1})
+
+C. //Equal 
+
+1.  db.users.find({age:{$eq:20}},{_id:0,name:1,age:1})
+or
+     db.users.find({age:20},{_id:0,name:1,age:1})
+
+
+D. // not equal to
+
+1.  db.users.find({age:{$ne:20}},{_id:0,name:1,age:1})
+
+E. // include  / not include
+ 
+1.  db.users.find({age:{$in:[20,21,23,24]}},{_id:0,name:1,age:1})
+2.  db.users.find({age:{$nin:[20,21,23,24]}},{_id:0,name:1,age:1})
+
+F. // and  / or
+
+1.  db.users.find({$and:[{age:20},{gender:"Male"}]},{_id:0,name:1,age:1})
+2.  db.users.find({$or:[{age:20},{gender:"Male"}]},{_id:0,name:1,age:1})
+
+
+G. // not greater than / not less than
+
+1.  db.users.find({age:{$not:{$gte:20}}},{_id:0,name:1,age:1})
+2. db.users.find({age:{$not:{$lte:20}}},{_id:0,name:1,age:1})
+
+
+H. // not greater than  equal to / not less than equal to 
+
+1.  db.users.find({age:{$not:{$gt:20}}},{_id:0,name:1,age:1})
+2. db.users.find({age:{$not:{$lt:20}}},{_id:0,name:1,age:1})
+
+I. //nor
+
+1. db.users.find({$nor:[{age:20},{gender:"Male"}]},{_id:0,name:1,age:1,gender:1})
+
+
+J. // for count
+
+1.db.users.find({$nor:[{age:20},{gender:"Male"}]},{_id:0,name:1,age:1,gender:1}).count()
+
+
+K. // for even / odd
+
+1.db.users.find({$nor:[{age:{$mod:[2,0]}}},{_id:0,name:1,age:1,gender:1})
+
+2.1.db.users.find({$nor:[{age:{$mod:[2,1]}}},{_id:0,name:1,age:1,gender:1})
+
+
+part-3
+
+A.// check Key exits or not
+
+1. db.users.find({address:{$exists:true}},{_id:0,name:1,age:1,gender:1})  // if exit it returns
+
+2.  db.users.updateMany({age:20},{$set:{address:undefined}}) 
+
+B. // set / unset
+
+1.  db.users.find({age:20},{$set:{age:21,name:"Pablo"}}) 
+2.  db.users.find({age:20},{$unset:{email:""}}) 
+
+C. //Skip  / limit / sort
+
+1. db.users.find({},{_id:0,id:1,name:1}).skip(5) // skipping from the top
+
+2. db.users.find({},{_id:0,id:1,name:1}).limit(5) //it give the limited data
+
+3  db.users.find({},{_id:0,id:1,name:1}).skip(5).limit(5)
+
+4.  db.users.find({},{_id:0,id:1,name:1}).skip(5).limit(5).sort({id:1}) //ascending
+
+5.  db.users.find({},{_id:0,id:1,name:1}).skip(5).limit(5).sort({id:-1}) //decending
+
+
+
