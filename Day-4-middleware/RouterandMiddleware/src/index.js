@@ -34,7 +34,7 @@ app.use("/products",productsRouter)
 app.use("/users",usersRouter)
 
 //here we use local middleware
-app.get("/",loggerMiddleware,authMiddleware, (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello, GET / is working now");
 });
 

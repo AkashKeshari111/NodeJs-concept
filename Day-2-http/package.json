@@ -4,7 +4,7 @@
   "description": "",
   "main": "http.js",
   "scripts": {
-    "serve": "nodemon ./http4.js"
+    "serve": "node ./http4.js"
   },
   "keywords": [],
   "author": "",
